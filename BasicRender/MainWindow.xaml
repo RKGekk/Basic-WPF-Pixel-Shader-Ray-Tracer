@@ -1,0 +1,27 @@
+﻿<Window x:Class="BasicRender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicRender"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="820"  Height="680" Initialized="Window_Initialized">
+    <Grid Background="#FF5F0152">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="statsText" Foreground="#FF5AF700"></TextBlock>
+        <Image Grid.Row="1" Grid.Column="0" x:Name="statImg" Width="320" Height="32" IsHitTestVisible="False"></Image>
+        <Image Grid.Row="2" Grid.Column="0" x:Name="img" Width="800" Height="600" IsHitTestVisible="False">
+            <Image.Effect>
+                <local:Gen1Effect x:Name="Fx1"></local:Gen1Effect>
+            </Image.Effect>
+        </Image>
+    </Grid>
+</Window>
